@@ -24,10 +24,8 @@ then
 
 fi
 
-y=$(echo ${d} | cut -d'-' -f1)
-m=$(echo ${d} | cut -d'-' -f2)
    
-cp $run_dir/getdata_CDS_ERA5.py $run_dir/jobs/getdata_CDS_ERA5${d}.py 
-sed -i "s/2019/$y/g" $run_dir/jobs/getdata_CDS_ERA5${d}.py 
-sed -i "s/'month': '01'/'month': ' '$m' '/g" $run_dir/jobs/getdata_CDS_ERA5${d}.py 
+cp $run_dir/getdata_CDS_ERA5.py $run_dir/jobs/getdata_CDS_ERA5${datein}.py 
+sed -i "s/2019/$year/g" $run_dir/jobs/getdata_CDS_ERA5${datein}.py 
+sed -i "s/'month': '01'/'month': ' '$month' '/g" $run_dir/jobs/getdata_CDS_ERA5${datein}.py 
   
