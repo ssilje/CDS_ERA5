@@ -19,9 +19,21 @@ else
 fi
 
    
-cp $script_dir/getdata_CDS_ERA5.py $run_dir/jobs/getdata_CDS_ERA5${datein}.py 
-sed -i "s/2019/$year/g" $run_dir/jobs/getdata_CDS_ERA5${datein}.py 
-sed -i "s/'month': '01'/'month': ' $month '/g" $run_dir/jobs/getdata_CDS_ERA5${datein}.py
-sed -i "s/DATA/ERA5_$datein/g" $run_dir/jobs/getdata_CDS_ERA5${datein}.py
+cp $script_dir/getdata_CDS_ERA5.py $run_dir/jobs/getdata_CDS_ERA5_${datein}.py 
+sed -i "s/2019/$year/g" $run_dir/jobs/getdata_CDS_ERA5_${datein}.py 
+sed -i "s/'month': '01'/'month': ' $month '/g" $run_dir/jobs/getdata_CDS_ERA5_${datein}.py
+sed -i "s/DATA/ERA5_$datein/g" $run_dir/jobs/getdata_CDS_ERA_5${datein}.py
 
+if [ ! -f ${run_dir}/jobs/ERA5_$datein.grb ]
+then
+ echo "running python $run_dir/jobs/getdata_CDS_ERA5_${datein}.py"
   
+ python  $run_dir/jobs/getdata_CDS_ERA5_${datein}.py
+ wait
+ echo "done..."
+ else 
+ echo " File already downloded "
+ fi  
+ else 
+ echo "Date does not match the available date"
+ fi  
