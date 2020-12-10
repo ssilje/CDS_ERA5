@@ -33,7 +33,5 @@ then
  echo "done..."
  else 
  echo " File already downloded "
- fi  
- else 
- echo "Date does not match the available date"
- fi  
+fi  
+
