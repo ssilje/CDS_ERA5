@@ -27,5 +27,7 @@ fi
    
 cp $run_dir/getdata_CDS_ERA5.py $run_dir/jobs/getdata_CDS_ERA5${datein}.py 
 sed -i "s/2019/$year/g" $run_dir/jobs/getdata_CDS_ERA5${datein}.py 
-sed -i "s/'month': '01'/'month': '$month '/g" $run_dir/jobs/getdata_CDS_ERA5${datein}.py 
+sed -i "s/'month': '01'/'month': ' $month '/g" $run_dir/jobs/getdata_CDS_ERA5${datein}.py
+sed -i "s/DATA/ERA5_$datein/g" $run_dir/jobs/getdata_CDS_ERA5${datein}.py
+
   
