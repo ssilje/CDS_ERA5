@@ -6,7 +6,7 @@ year=$(echo ${datein} | cut -d'-' -f1)
 month=$(echo ${datein} | cut -d'-' -f2)
 echo ${datein}
 
-run_dir='/cluster/home/sso102/ERA5'
+run_dir='/cluster/home/sso102/ERA5/CDS_ERA5'
 savedir='/cluster/work/users/sso102/ERA5'
 
 
