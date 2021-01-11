@@ -30,7 +30,7 @@ for m in ${month}; do
 datein=$YYYY$m
 echo ${savedir}ERA5_${datein}
 p1=${savedir}ERA5_${datein}
-$p1=${p1//\//\\/}
+#$p1=${p1//\//\\/}
 #$p2=${p2//\//\\/}
 #sed s/$p1/$p2/ file
 #sed s/${p1//\//\\/}/${p2//\//\\/}/ file
@@ -39,7 +39,7 @@ cp $script_dir/getdata_CDS_ERA5.py $run_dir/jobs/getdata_CDS_ERA5_${datein}.py
 sed -i "s/2019/${YYYY}/g" $run_dir/jobs/getdata_CDS_ERA5_${datein}.py 
 sed -i "s/'month': '01'/'month': ' $m '/g" $run_dir/jobs/getdata_CDS_ERA5_${datein}.py
 #sed -i "s/DATA/${${savedir}ERA5_${datein}//\//\\/}/g" $run_dir/jobs/getdata_CDS_ERA5_${datein}.py
-sed -i 's|DATA|${savedir}ERA5_${datein}|g' $run_dir/jobs/getdata_CDS_ERA5_${datein}.py
+sed -i 's|DATA|"${savedir}ERA5_${datein}"|g' $run_dir/jobs/getdata_CDS_ERA5_${datein}.py
 
 if [ ! -f ${run_dir}/jobs/ERA5_${datein}.grb ]
 then
