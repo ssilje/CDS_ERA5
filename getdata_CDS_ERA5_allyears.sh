@@ -46,8 +46,9 @@ then
  echo " File already downloded "
 fi  
 
-YYYY=`expr ${YYYY} + 1`
+
 done
+YYYY=`expr ${YYYY} + 1`
 done
 
 
