@@ -8,6 +8,7 @@ c.retrieve(
         'product_type': 'reanalysis',
         'format': 'grib',
         'variable': 'total_precipitation',
+        'grid': '1/1',
         'year': '2019',
         'month': '01',
         'day': [
