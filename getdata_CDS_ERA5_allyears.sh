@@ -3,8 +3,9 @@
 
 
 syear=1999
-eyear=2019
-month='01 02 03 04 05 06 07 08 09 10 11 12'
+eyear=1999
+#month='01 02 03 04 05 06 07 08 09 10 11 12'
+month='01'
 script_dir='/cluster/home/sso102/ERA5/CDS_ERA5'
 run_dir='/cluster/work/users/sso102/ERA5/'
 savedir='/cluster/work/users/sso102/ERA5/sfc/tp/'
