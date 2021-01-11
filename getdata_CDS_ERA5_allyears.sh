@@ -27,7 +27,7 @@ do
 for m in ${month}; do 
 
 datein=$YYYY$m
-
+echo ${savedir}ERA5_${datein}
 cp $script_dir/getdata_CDS_ERA5.py $run_dir/jobs/getdata_CDS_ERA5_${datein}.py 
 sed -i "s/2019/${YYYY}/g" $run_dir/jobs/getdata_CDS_ERA5_${datein}.py 
 sed -i "s/'month': '01'/'month': ' $m '/g" $run_dir/jobs/getdata_CDS_ERA5_${datein}.py
