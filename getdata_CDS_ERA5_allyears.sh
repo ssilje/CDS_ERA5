@@ -35,7 +35,7 @@ sed -i "s/'month': '01'/'month': ' $m '/g" $run_dir/jobs/getdata_CDS_ERA5_${date
 #sed -i "s/DATA/${${savedir}ERA5_${datein}//\//\\/}/g" $run_dir/jobs/getdata_CDS_ERA5_${datein}.py
 sed -i 's|DATA|'${savedir}ERA5_tp_${datein}'|g' $run_dir/jobs/getdata_CDS_ERA5_${datein}.py
 
-if [ ! -f ${run_dir}/jobs/ERA5_${datein}.grb ]
+if [ ! -f ${savedir}ERA5_tp_${datein}.grb ]
 then
  echo "running python $run_dir/jobs/getdata_CDS_ERA5_${datein}.py"
   
