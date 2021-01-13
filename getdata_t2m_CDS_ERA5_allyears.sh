@@ -5,7 +5,7 @@
 syear=1999
 eyear=2020
 month='01 02 03 04 05 06 07 08 09 10 11 12'
-script_dir='/cluster/home/sso102/ERA5/CDS_ERA5'
+script_dir=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 run_dir='/cluster/work/users/sso102/ERA5/'
 savedir='/cluster/work/users/sso102/ERA5/sfc/t2m/'
 
