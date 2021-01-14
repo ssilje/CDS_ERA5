@@ -34,7 +34,7 @@ cp $script_dir/getdata_${var}_CDS_ERA5.py $run_dir/jobs/getdata_${var}_CDS_ERA5_
 sed -i "s/2019/${YYYY}/g" $run_dir/jobs/getdata_${var}_CDS_ERA5_${datein}.py 
 sed -i "s/'month': '01'/'month': ' $m '/g" $run_dir/jobs/getdata_${var}_CDS_ERA5_${datein}.py
 #sed -i "s/DATA/${${savedir}ERA5_${datein}//\//\\/}/g" $run_dir/jobs/getdata_t2m_CDS_ERA5_${datein}.py
-sed -i 's|DATA|'${savedir}ERA5_${var}_${datein}'|g' $run_dir/jobs/getdata_${var}_CDS_ERA5_${datein}.py
+sed -i 's|DATA|'${savedir}/ERA5_${var}_${datein}'|g' $run_dir/jobs/getdata_${var}_CDS_ERA5_${datein}.py
 
 if [ ! -f ${savedir}ERA5_${var}_${datein}.grb ]
 then
