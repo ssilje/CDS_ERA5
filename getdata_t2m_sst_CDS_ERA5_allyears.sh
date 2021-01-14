@@ -8,7 +8,7 @@ month='01 02 03 04 05 06 07 08 09 10 11 12'
 script_dir=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 var='sst'
 run_dir='/cluster/work/users/sso102/ERA5/'
-savedir='/cluster/work/users/sso102/ERA5/sfc/${var}'
+savedir=/cluster/work/users/sso102/ERA5/sfc/${var}
 
 
 if [ ! -d ${run_dir}/jobs ]
